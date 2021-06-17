@@ -24,7 +24,7 @@ function Accounts() {
   }, []) 
  
   return(
-    <div>
+    <>
       {data.length > 1 ? (
         <Table hover>
         <thead>
@@ -49,7 +49,7 @@ function Accounts() {
         </tbody>
       </Table>
       ) : <Loading />}
-    </div>
+    </>
   )
 }
 

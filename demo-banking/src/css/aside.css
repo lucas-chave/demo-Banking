@@ -7,16 +7,23 @@
 
 .aside {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .container-aside {
   background: #1395e1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50%;
+  position: fixed;
+  /* height: 1; */
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  align-self:flex-start;
 }
 
 .container-aside h2 {
@@ -29,5 +36,7 @@
 .dashboard {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-self: center;
   margin: 0 auto;
 }
