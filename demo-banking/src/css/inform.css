@@ -1,0 +1,11 @@
+.container-inform {
+  display: flex;
+  margin: 0 auto;
+  padding: 30px 60px;
+  background: #fecb72;
+  border-radius: 8px;
+}
+
+.container-inform h4 {
+  margin-right: 8px;
+}

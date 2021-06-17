@@ -1,0 +1,9 @@
+.informs {
+  display: flex;
+  flex-direction: row;
+  margin: 24px;
+}
+
+.containers-informs {
+  margin: 24px;
+}

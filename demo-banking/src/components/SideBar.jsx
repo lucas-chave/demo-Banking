@@ -13,7 +13,9 @@ function SideBar(props) {
             <Button text="Contas" to="/contas" />
           </div>
         </div>
-        {children}
+        <div className="dashboard">
+          {children}
+        </div>
       </aside>
   );
 }

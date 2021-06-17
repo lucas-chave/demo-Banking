@@ -8,6 +8,7 @@ import {
   ValueAxis,
 } from '@devexpress/dx-react-chart-material-ui';
 import { Animation } from '@devexpress/dx-react-chart';
+import '../css/graphic.css'
 
 const data = [
   { year: '1950', population: 2.525 },
@@ -22,7 +23,6 @@ const data = [
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
-
     this.state = {
       data,
     };
@@ -32,21 +32,23 @@ export default class Demo extends React.PureComponent {
     const { data: chartData } = this.state;
 
     return (
-      <Paper>
-        <Chart
-          data={chartData}
-        >
-          <ArgumentAxis />
-          <ValueAxis max={7} />
+      <div className="graphic">
+        <Paper>
+          <Chart
+            data={chartData}
+            >
+            <ArgumentAxis />
+            <ValueAxis max={7} />
 
-          <BarSeries
-            valueField="population"
-            argumentField="year"
-          />
-          <Title text="World population" />
-          <Animation />
-        </Chart>
-      </Paper>
+            <BarSeries
+              valueField="population"
+              argumentField="year"
+              />
+            <Title text="World population" />
+            <Animation />
+          </Chart>
+        </Paper>
+        </div>
     );
   }
 }
