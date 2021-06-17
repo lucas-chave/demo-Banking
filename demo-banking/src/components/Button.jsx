@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import '../css/button.css'
 
 function Button(props) {
   const { text, to } = props;
   return(
-      <Link to={ to } >{ text }</Link>
+      <Link className="button" to={ to } >{ text }</Link>
   )
 }
 

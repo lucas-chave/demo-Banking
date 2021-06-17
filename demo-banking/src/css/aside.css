@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.aside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-aside {
+  background: #1395e1;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-aside h2 {
+  margin-top: 24px;
+  padding: 12px;
+  color: #c5f9fe;
+  font-family: Arial, Helvetica, sans-serif;
+}
