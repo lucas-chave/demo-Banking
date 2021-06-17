@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Table } from 'reactstrap'
 import PropTypes from 'prop-types'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Loading from './Loading';
 
 function Accounts() {
 
@@ -23,28 +24,32 @@ function Accounts() {
   }, []) 
  
   return(
-    <Table hover>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Birthday</th>
-        </tr>
-      </thead>
-      <tbody>
-      {data.length ? data.map((user, index) => {
-        const { email, name, birthday } = user.attributes
-         return (
-          <tr key={index}>
-            <th scope="row">{user.id}</th>
-            <td>{name}</td>
-            <td>{email}</td>
-            <td>{birthday}</td>
+    <div>
+      {data.length > 1 ? (
+        <Table hover>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birthday</th>
           </tr>
-      )}) : 'carregando...'}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+        {data.length ? (data.map((user, index) => {
+          const { email, name, birthday } = user.attributes
+           return (
+            <tr key={index}>
+              <th scope="row">{user.id}</th>
+              <td>{name}</td>
+              <td>{email}</td>
+              <td>{birthday}</td>
+            </tr>
+        )})) : <Loading />}
+        </tbody>
+      </Table>
+      ) : <Loading />}
+    </div>
   )
 }
 
