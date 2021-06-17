@@ -2,10 +2,10 @@
   animation: is-rotating 1s infinite;
   border: 6px solid #e5e5e5;
   border-radius: 50%;
-  border-top-color: #51d4db;
+  border-top-color: #1395e1;
   height: 50px;
   width: 50px;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 @keyframes is-rotating {
