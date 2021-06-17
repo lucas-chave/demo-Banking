@@ -1,6 +1,8 @@
 import { fetchAPI } from '../service/fetch'
 import React, { useEffect, useState } from 'react'
 import { Table } from 'reactstrap'
+import PropTypes from 'prop-types'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Accounts() {
 
@@ -21,10 +23,10 @@ function Accounts() {
   }, []) 
  
   return(
-    <Table>
+    <Table hover>
       <thead>
         <tr>
-          <th>#</th>
+          <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Birthday</th>
@@ -45,5 +47,23 @@ function Accounts() {
     </Table>
   )
 }
+
+Table.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  size: PropTypes.string,
+  bordered: PropTypes.bool,
+  borderless: PropTypes.bool,
+  striped: PropTypes.bool,
+  dark: PropTypes.bool,
+  hover: PropTypes.bool,
+  responsive: PropTypes.bool,
+  // Custom ref handler that will be assigned to the "ref" of the inner <table> element
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string,
+    PropTypes.object
+  ])
+  };
 
 export default Accounts

@@ -5,7 +5,7 @@ function Inform(props) {
   return(
     <div className="container-inform">
         <h4>{text}</h4>
-        <div>{data}</div>
+        <h4>{data}</h4>
     </div>
   )
 }

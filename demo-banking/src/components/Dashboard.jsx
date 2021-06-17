@@ -1,16 +1,37 @@
 import Graphic from "./Graphic";
 import Inform from "./Inform";
 import '../css/dashboard.css'
+import { fetchAPI } from '../service/fetch'
+import { useEffect, useState } from "react";
+
+
 
 function Dashboard() {
+  
+  const [data, setData] = useState([])
+  
+  const result = async () => {
+    try {
+      const response = await fetchAPI()
+      console.log(response.data);
+      setData(response.data)
+    } catch{
+      console.log('err');
+    }
+  }
+  
+  useEffect(() => {
+    result()
+  }, [])
+
   return(
     <div className="container">
       <div className="informs">
         <div className="containers-informs">
-          <Inform text="Contas PJ" data="2" />
+          <Inform text="Contas PJ" data={data.length ? data.length : 0 } />
         </div>
         <div className="containers-informs">
-          <Inform text="Contas PF" data="2" />
+          <Inform text="Contas PF" data={ data.length ? data.length - 20 : 0 } />
         </div>
       </div>
       <Graphic />
