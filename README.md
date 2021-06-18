@@ -1,4 +1,4 @@
-# demo-Banking
+# demo-Admin
 
 # how to start
 
