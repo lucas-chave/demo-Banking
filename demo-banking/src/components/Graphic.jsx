@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import {
   Chart,
@@ -20,35 +20,23 @@ const data = [
   { year: '2012', population: 6.930 },
 ];
 
-export default class Demo extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data,
-    };
-  }
-
-  render() {
-    const { data: chartData } = this.state;
-
-    return (
-      <div className="graphic">
-        <Paper>
-          <Chart
-            data={chartData}
-            >
-            <ArgumentAxis />
-            <ValueAxis max={7} />
-
-            <BarSeries
-              valueField="population"
-              argumentField="year"
-              />
-            <Title text="Movimentações de Acessos" />
-            <Animation />
-          </Chart>
-        </Paper>
-        </div>
-    );
-  }
+export function Graphic() {
+  return (
+    <div className="graphic">
+      <Paper>
+        <Chart
+          data={ data }
+        >
+        <ArgumentAxis />
+        <ValueAxis max={7} />
+        <BarSeries
+          valueField="population"
+          argumentField="year"
+          />
+        <Title text="Movimentações de Acessos" />
+        <Animation />
+        </Chart>
+      </Paper>
+    </div>
+  );
 }

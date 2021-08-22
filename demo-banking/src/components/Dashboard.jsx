@@ -1,4 +1,4 @@
-import Graphic from "./Graphic";
+import { Graphic } from "./Graphic";
 import Inform from "./Inform";
 import '../css/dashboard.css';
 import { fetchAPI } from '../service/fetch';
