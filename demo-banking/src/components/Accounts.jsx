@@ -6,9 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Loading from './Loading';
 
 function Accounts() {
-
   const [data, setData] = useState([]);
-
   const result = async () => {
     try {
       const response = await fetchAPI();
