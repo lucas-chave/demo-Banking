@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
-import '../css/button.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../css/button.css';
 
 function Button(props) {
   const { text, to } = props;
@@ -8,4 +9,4 @@ function Button(props) {
   )
 }
 
-export default Button
+export default Button;

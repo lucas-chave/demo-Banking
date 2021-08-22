@@ -1,28 +1,28 @@
 import Graphic from "./Graphic";
 import Inform from "./Inform";
-import '../css/dashboard.css'
-import { fetchAPI } from '../service/fetch'
+import '../css/dashboard.css';
+import { fetchAPI } from '../service/fetch';
 import { useEffect, useState } from "react";
 
 
 
 function Dashboard() {
   
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   
   const result = async () => {
     try {
-      const response = await fetchAPI()
+      const response = await fetchAPI();
       console.log(response.data);
-      setData(response.data)
-    } catch{
-      console.log('err');
+      setData(response.data);
+    } catch (err) {
+      console.log(err);
     }
   }
   
   useEffect(() => {
-    result()
-  }, [])
+    result();
+  }, []);
 
   return(
     <div className="container">
@@ -36,7 +36,7 @@ function Dashboard() {
       </div>
       <Graphic />
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;

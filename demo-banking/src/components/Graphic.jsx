@@ -8,7 +8,7 @@ import {
   ValueAxis,
 } from '@devexpress/dx-react-chart-material-ui';
 import { Animation } from '@devexpress/dx-react-chart';
-import '../css/graphic.css'
+import '../css/graphic.css';
 
 const data = [
   { year: '2000', population: 2.525 },

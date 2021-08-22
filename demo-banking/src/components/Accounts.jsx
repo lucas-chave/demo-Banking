@@ -1,27 +1,27 @@
-import { fetchAPI } from '../service/fetch'
-import React, { useEffect, useState } from 'react'
-import { Table } from 'reactstrap'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react';
+import { fetchAPI } from '../service/fetch';
+import { Table } from 'reactstrap';
+import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Loading from './Loading';
 
 function Accounts() {
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
   const result = async () => {
     try {
-      const response = await fetchAPI()
+      const response = await fetchAPI();
       console.log(response.data);
-      setData(response.data)
-    } catch{
-      console.log('err');
+      setData(response.data);
+    } catch (err) {
+      console.log(err);
     }
   }
 
   useEffect(() => {
-    result()
-  }, []) 
+    result();
+  }, []);
  
   return(
     <>
@@ -50,7 +50,7 @@ function Accounts() {
       </Table>
       ) : <Loading />}
     </>
-  )
+  );
 }
 
 Table.propTypes = {
@@ -71,4 +71,4 @@ Table.propTypes = {
   ])
   };
 
-export default Accounts
+export default Accounts;
