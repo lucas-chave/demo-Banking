@@ -8,6 +8,7 @@ function App() {
     document.title = 'Admin demo'
   }
   titleTag();
+
   return (
     <HashRouter>
       <SideBar>
