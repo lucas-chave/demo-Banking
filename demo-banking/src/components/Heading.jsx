@@ -11,5 +11,3 @@ export function Heanding(props) {
 Heanding.propTypes = {
   text: PropTypes.string.isRequired,
 };
-
-export default Heanding;

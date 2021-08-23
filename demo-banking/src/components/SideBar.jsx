@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from "./Button";
-import Heanding from "./Heading";
+import { Heanding } from "./Heading";
 import '../css/aside.css'
 
 export function SideBar({ children }) { 
