@@ -8,7 +8,6 @@
 .aside {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .container-aside {
@@ -17,6 +16,7 @@
   flex-direction: column;
   padding-bottom: 50%;
   position: fixed;
+  align-self: flex-start;
 }
 
 .buttons {
@@ -35,7 +35,15 @@
 .dashboard {
   display: flex;
   flex-direction: column;
+  margin-left: 173px;
   align-items: center;
-  align-self: center;
+}
+
+.sub-container-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+
 }
