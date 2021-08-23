@@ -4,12 +4,8 @@ import '../css/dashboard.css';
 import { fetchAPI } from '../service/fetch';
 import { useEffect, useState } from "react";
 
-
-
-function Dashboard() {
-  
+export function Dashboard() {
   const [data, setData] = useState([]);
-  
   const result = async () => {
     try {
       const response = await fetchAPI();
@@ -19,12 +15,12 @@ function Dashboard() {
       console.log(err);
     }
   }
-  
+
   useEffect(() => {
     result();
   }, []);
 
-  return(
+  return (
     <div className="container">
       <div className="informs">
         <div className="containers-informs">
@@ -38,5 +34,3 @@ function Dashboard() {
     </div>
   );
 }
-
-export default Dashboard;
