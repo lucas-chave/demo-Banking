@@ -1,5 +1,4 @@
 export async function fetchAPI()  {
-  const API = await fetch('https://react-app-m2y.herokuapp.com/contacts')
-  const apiJson = await API.json()
-  return apiJson
+  const result = await ((await fetch('https://react-app-m2y.herokuapp.com/contacts')).json())
+  return result;
 }

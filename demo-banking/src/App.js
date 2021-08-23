@@ -4,6 +4,10 @@ import { SideBar } from './components/SideBar'
 import { Accounts } from './components/Accounts';
 
 function App() {
+  function titleTag() {
+    document.title = 'Admin demo'
+  }
+  titleTag();
   return (
     <HashRouter>
       <SideBar>
