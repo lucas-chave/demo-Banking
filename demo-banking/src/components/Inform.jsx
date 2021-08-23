@@ -1,13 +1,17 @@
-import '../css/inform.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../css/inform.css';
 
-function Inform(props) {
-  const { text, data } = props;
-  return(
+export function Inform({ text, data }) {
+  return (
     <div className="container-inform">
-        <h4>{text}</h4>
-        <h4>{data}</h4>
+      <h4>{text}</h4>
+      <h4>{data}</h4>
     </div>
-  )
+  );
 }
 
-export default Inform
+Inform.propTypes = {
+  text: PropTypes.string.isRequired,
+  data: PropTypes.string.isRequired,
+};
