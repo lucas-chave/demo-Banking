@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Heanding(props) {
-  const { text } = props;
+export function Heanding({ text }) {
   return(
     <h2>{text}</h2>
   );
