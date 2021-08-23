@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { fetchAPI } from '../service/fetch';
 import { Table } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { Loading } from './Loading';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Loading from './Loading';
 
-function Accounts() {
+export function Accounts() {
   const [data, setData] = useState([]);
   const result = async () => {
     try {
@@ -68,5 +68,3 @@ Table.propTypes = {
     PropTypes.object
   ])
   };
-
-export default Accounts;

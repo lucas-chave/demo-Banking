@@ -1,7 +1,7 @@
 import { Route, Switch, HashRouter } from 'react-router-dom'
-import Dashboard from './components/Dashboard';
-import SideBar from './components/SideBar'
-import Accounts from './components/Accounts';
+import { Dashboard } from './components/Dashboard';
+import { SideBar } from './components/SideBar'
+import { Accounts } from './components/Accounts';
 
 function App() {
   return (

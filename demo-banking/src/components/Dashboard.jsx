@@ -1,6 +1,6 @@
 import React from 'react';
 import { Graphic } from "./Graphic";
-import Inform from "./Inform";
+import { Inform } from "./Inform";
 import '../css/dashboard.css';
 import { fetchAPI } from '../service/fetch';
 import { useEffect, useState } from "react";
