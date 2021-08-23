@@ -1,23 +1,26 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import Button from "./Button";
 import Heanding from "./Heading";
 import '../css/aside.css'
 
-function SideBar(props) {
-  const { children } = props; 
+export function SideBar({ children }) { 
   return(
-      <aside className="aside">
-        <div className="container-aside">
-          <Heanding text="Demo Banking" />
-          <div className="buttons">
-            <Button text="Home" to="/" />
-            <Button text="Contas" to="/contas" />
-          </div>
+    <aside className="aside">
+      <div className="container-aside">
+        <Heanding text="Demo Banking" />
+        <div className="buttons">
+          <Button text="Home" to="/" />
+          <Button text="Contas" to="/contas" />
         </div>
-        <div className="dashboard">
-          {children}
-        </div>
-      </aside>
+      </div>
+      <div className="dashboard">
+        {children}
+      </div>
+    </aside>
   );
 }
 
-export default SideBar
+SideBar.propTypes = {
+  children: PropTypes.node.isRequired,
+};
