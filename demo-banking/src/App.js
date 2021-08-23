@@ -1,13 +1,16 @@
-import { Route, Switch, HashRouter } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
-import { SideBar } from './components/SideBar'
+import { SideBar } from './components/SideBar';
 import { Accounts } from './components/Accounts';
 
 function App() {
-  function titleTag() {
-    document.title = 'Admin demo'
-  }
-  titleTag();
+  useEffect(() => {
+    const titleTag = () => {
+      document.title = 'Admin demo'
+    }
+    titleTag();
+  }, []);
 
   return (
     <HashRouter>
