@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Heanding({ text }) {
+export function Heading({ text }) {
   return(
     <h2>{text}</h2>
   );
 }
 
-Heanding.propTypes = {
+Heading.propTypes = {
   text: PropTypes.string.isRequired,
 };
